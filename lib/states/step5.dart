@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ischool/states/main_home.dart';
 import 'package:ischool/utility/my_constant.dart';
 import 'package:ischool/widgets/show_button.dart';
 import 'package:otp_text_field/otp_text_field.dart';
@@ -43,7 +44,7 @@ class _Step5State extends State<Step5> {
                   selectedStep: 5,
                   nbSteps: 6,
                 ),
-                 newTitle(title: 'ยืนรหัส PIN อีกครั้ง'),
+                newTitle(title: 'ยืนรหัส PIN อีกครั้ง'),
                 OTPTextField(
                   fieldStyle: FieldStyle.box,
                   length: 6,
@@ -74,8 +75,6 @@ class _Step5State extends State<Step5> {
     );
   }
 
-
-
   Widget newBottom() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -89,7 +88,12 @@ class _Step5State extends State<Step5> {
                   Navigator.pop(context);
                 }),
             ShowButton(
-                label: 'ตกลง', pressfunc: () {}, color: Colors.orange.shade700),
+              label: 'ตกลง',
+              pressfunc: () {
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const MainHome(),), (route) => false);
+              },
+              color: Colors.orange.shade700,
+            ),
           ],
         ),
       ],

@@ -154,7 +154,7 @@ class _Step1State extends State<Step1> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 16),
+                          margin: const EdgeInsets.symmetric(vertical: 16),
                           child: ShowText(
                             label: titles[1],
                             textStyle: MyConstant().h2Style(),
@@ -162,7 +162,7 @@ class _Step1State extends State<Step1> {
                         ),
                       ],
                     ),
-                    StepsIndicator(
+                    const StepsIndicator(
                       lineLength: 60,
                       selectedStep: 1,
                       nbSteps: 6,

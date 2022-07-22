@@ -29,7 +29,7 @@ class _Step0State extends State<Step0> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 16),
+                      margin: const EdgeInsets.symmetric(vertical: 16),
                       child: ShowText(
                         label: titles[0],
                         textStyle: MyConstant().h2Style(),
